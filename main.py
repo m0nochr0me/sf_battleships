@@ -180,7 +180,7 @@ class Board:
 
     def __init__(self, size=10, hidden=False):
         self.size = size
-        self.unavailable_dots = set()  # contain all ship's dots including they mar
+        self.unavailable_dots = set()  # contain all ship's dots including they margins
         self.used_dots = set()
         self.ships = []
         self.hidden = hidden
