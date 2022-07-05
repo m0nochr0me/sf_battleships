@@ -351,7 +351,11 @@ class Game:
         return board
 
     def greet(self):
-        print('Battleships Game')
+        print('####################### #')
+        print('# Battleships Game (SF) #')
+        print('#        2022           #')
+        print('####################### #')
+        input('Press Enter to continue...')
 
     def loop(self):
         """Main loop"""
