@@ -1,4 +1,4 @@
-"""Models for Battleships  game """
+"""Battleships  game (SF)"""
 
 from random import randint
 from functools import lru_cache, cached_property
