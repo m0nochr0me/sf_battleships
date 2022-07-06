@@ -1,4 +1,9 @@
-"""Battleships  game (SF)"""
+"""
+##########################
+# Battleships  game (SF) #
+#         2022           #
+##########################
+"""
 
 from random import randint
 from functools import lru_cache, cached_property
@@ -351,10 +356,7 @@ class Game:
         return board
 
     def greet(self):
-        print('####################### #')
-        print('# Battleships Game (SF) #')
-        print('#        2022           #')
-        print('####################### #')
+        print(__doc__)
         input('Press Enter to continue...')
 
     def loop(self):
