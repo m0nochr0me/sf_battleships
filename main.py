@@ -359,17 +359,21 @@ class Game:
         print(__doc__)
         input('Press Enter to continue...')
 
+    def show(self):
+        """Clear console then display game boards"""
+        cls()
+        print('_' * 80)
+        print(f'Human \t(Ships: {self.human.own_board.live_ships()})\tLast shot: {self.ai.last_target}')
+        self.human.own_board.display()
+        print(f'AI \t(Ships: {self.ai.own_board.live_ships()})\tLast shot: {self.human.last_target}')
+        self.ai.own_board.display()
+
     def loop(self):
         """Main loop"""
         turn = 0  # considering making this randint(0, 1), for now first turn human's
         while True:
-            cls()
-            print('_' * 80)
-            print(f'Human \t(Ships: {self.human.own_board.live_ships()})\tLast shot: {self.ai.last_target}')
-            self.human.own_board.display()
 
-            print(f'AI \t(Ships: {self.ai.own_board.live_ships()})\tLast shot: {self.human.last_target}')
-            self.ai.own_board.display()
+            self.show()
 
             if turn % 2:
                 self.ai.move()
