@@ -390,6 +390,15 @@ class Game:
                 print('Human Win')
                 break
 
+        while True:
+            self.show()
+            again = input('Try again? (y/n)')
+            if again in 'yY':
+                self.__init__()
+                self.start()
+            else:
+                break
+
     def start(self):
         self.greet()
         self.loop()
